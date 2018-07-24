@@ -1,0 +1,28 @@
+		<link rel="stylesheet" href="../../plugins/sceditor/minified/themes/default.min.css" type="text/css" media="all" />
+
+		<script src="../../plugins/sceditor/js/jquery.min.js"></script>
+		<script src="../../plugins/sceditor/minified/jquery.sceditor.bbcode.min.js"></script>
+
+		<script>
+
+			jQuery(document).ready(function() {
+
+					jQuery("#about").sceditor({
+			plugins: "xhtml",
+						style: "../../plugins/sceditor/minified/jquery.sceditor.default.min.css"
+					});
+
+
+			});
+		</script>
+		<form action="" method="post">
+				<textarea name="bbcode_field" id="about" style="height:300px;width:600px;">[center][size=3][b]BBCode SCEditor[/b][/size][/center]
+
+Give it a try! :)
+
+[color=#ff00]Red text! [/color][color=#3399ff]Blue?[/color]
+
+[ul][li]A simple list[/li][li]list item 2[/li][/ul]
+
+If you are using IE9+ or any non-IE browser just type [b]:[/b]) and it should be converted into :) as you type.</textarea>
+		</form>

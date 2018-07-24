@@ -1,0 +1,99 @@
+/*Table structure for table `cities` */
+
+CREATE TABLE `cities` (
+  `id_city` int(11) NOT NULL AUTO_INCREMENT,
+  `city_name` varchar(50) DEFAULT NULL,
+  `id_country` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id_city`)
+) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
+
+/*Data for the table `cities` */
+
+insert  into `cities`(`id_city`,`city_name`,`id_country`) values (1,'Sao Paulo',1);
+insert  into `cities`(`id_city`,`city_name`,`id_country`) values (2,'Rio de Janeiro',1);
+insert  into `cities`(`id_city`,`city_name`,`id_country`) values (3,'Brasilia',1);
+insert  into `cities`(`id_city`,`city_name`,`id_country`) values (4,'Toronto',2);
+insert  into `cities`(`id_city`,`city_name`,`id_country`) values (5,'Calgary',2);
+insert  into `cities`(`id_city`,`city_name`,`id_country`) values (6,'Quebec',2);
+insert  into `cities`(`id_city`,`city_name`,`id_country`) values (7,'Montreal',2);
+insert  into `cities`(`id_city`,`city_name`,`id_country`) values (8,'Miami',3);
+insert  into `cities`(`id_city`,`city_name`,`id_country`) values (9,'New York',3);
+insert  into `cities`(`id_city`,`city_name`,`id_country`) values (10,'Los Angeles',3);
+insert  into `cities`(`id_city`,`city_name`,`id_country`) values (11,'Caracas',4);
+insert  into `cities`(`id_city`,`city_name`,`id_country`) values (12,'Valencia',4);
+insert  into `cities`(`id_city`,`city_name`,`id_country`) values (13,'Maracaibo',4);
+insert  into `cities`(`id_city`,`city_name`,`id_country`) values (14,'Puerto La Cruz',4);
+
+/*Table structure for table `countries` */
+
+CREATE TABLE `countries` (
+  `id_country` int(11) NOT NULL AUTO_INCREMENT,
+  `country_name` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`id_country`)
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+
+/*Data for the table `countries` */
+
+insert  into `countries`(`id_country`,`country_name`) values (1,'Brazil');
+insert  into `countries`(`id_country`,`country_name`) values (2,'Canada');
+insert  into `countries`(`id_country`,`country_name`) values (3,'United States');
+insert  into `countries`(`id_country`,`country_name`) values (4,'Venezuela');
+
+/*Table structure for table `zones` */
+
+CREATE TABLE `zones` (
+  `id_zone` int(11) NOT NULL AUTO_INCREMENT,
+  `zone_name` varchar(50) DEFAULT NULL,
+  `id_city` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id_zone`)
+) ENGINE=MyISAM AUTO_INCREMENT=44 DEFAULT CHARSET=latin1;
+
+/*Data for the table `zones` */
+
+insert  into `zones`(`id_zone`,`zone_name`,`id_city`) values (1,'Paraisoloplis',1);
+insert  into `zones`(`id_zone`,`zone_name`,`id_city`) values (2,'Heliopolis',1);
+insert  into `zones`(`id_zone`,`zone_name`,`id_city`) values (3,'Vila Dalva',1);
+insert  into `zones`(`id_zone`,`zone_name`,`id_city`) values (4,'Santa Cruz',2);
+insert  into `zones`(`id_zone`,`zone_name`,`id_city`) values (5,'Paciencia',2);
+insert  into `zones`(`id_zone`,`zone_name`,`id_city`) values (6,'Bangu',2);
+insert  into `zones`(`id_zone`,`zone_name`,`id_city`) values (7,'Cruceiro',3);
+insert  into `zones`(`id_zone`,`zone_name`,`id_city`) values (8,'Bandeirante',3);
+insert  into `zones`(`id_zone`,`zone_name`,`id_city`) values (9,'Nacoes',3);
+insert  into `zones`(`id_zone`,`zone_name`,`id_city`) values (10,'Downsview',4);
+insert  into `zones`(`id_zone`,`zone_name`,`id_city`) values (11,'Byview Village',4);
+insert  into `zones`(`id_zone`,`zone_name`,`id_city`) values (12,'L Amoreaux',4);
+insert  into `zones`(`id_zone`,`zone_name`,`id_city`) values (13,'Victoria Park',5);
+insert  into `zones`(`id_zone`,`zone_name`,`id_city`) values (14,'Mission',5);
+insert  into `zones`(`id_zone`,`zone_name`,`id_city`) values (15,'Highfield',5);
+insert  into `zones`(`id_zone`,`zone_name`,`id_city`) values (16,'Montcalm',6);
+insert  into `zones`(`id_zone`,`zone_name`,`id_city`) values (17,'Levis',6);
+insert  into `zones`(`id_zone`,`zone_name`,`id_city`) values (18,'Vanier',6);
+insert  into `zones`(`id_zone`,`zone_name`,`id_city`) values (19,'Longueuil',7);
+insert  into `zones`(`id_zone`,`zone_name`,`id_city`) values (20,'Candiac',7);
+insert  into `zones`(`id_zone`,`zone_name`,`id_city`) values (21,'Napierville',7);
+insert  into `zones`(`id_zone`,`zone_name`,`id_city`) values (22,'Coral Gables',8);
+insert  into `zones`(`id_zone`,`zone_name`,`id_city`) values (23,'Hialeah',8);
+insert  into `zones`(`id_zone`,`zone_name`,`id_city`) values (24,'Doral',8);
+insert  into `zones`(`id_zone`,`zone_name`,`id_city`) values (25,'Elmont',9);
+insert  into `zones`(`id_zone`,`zone_name`,`id_city`) values (26,'Oceanside',9);
+insert  into `zones`(`id_zone`,`zone_name`,`id_city`) values (27,'Manhattan',9);
+insert  into `zones`(`id_zone`,`zone_name`,`id_city`) values (28,'Long Beach',10);
+insert  into `zones`(`id_zone`,`zone_name`,`id_city`) values (29,'Santa Clara',10);
+insert  into `zones`(`id_zone`,`zone_name`,`id_city`) values (30,'Palo Alto',10);
+insert  into `zones`(`id_zone`,`zone_name`,`id_city`) values (31,'Chacao',11);
+insert  into `zones`(`id_zone`,`zone_name`,`id_city`) values (32,'Bello Monte',11);
+insert  into `zones`(`id_zone`,`zone_name`,`id_city`) values (33,'La Pastora',11);
+insert  into `zones`(`id_zone`,`zone_name`,`id_city`) values (34,'San Diego',12);
+insert  into `zones`(`id_zone`,`zone_name`,`id_city`) values (35,'Centro',12);
+insert  into `zones`(`id_zone`,`zone_name`,`id_city`) values (36,'Bejuma',12);
+insert  into `zones`(`id_zone`,`zone_name`,`id_city`) values (37,'Paraiso',13);
+insert  into `zones`(`id_zone`,`zone_name`,`id_city`) values (38,'La Victoria',13);
+insert  into `zones`(`id_zone`,`zone_name`,`id_city`) values (39,'San Agustin',13);
+insert  into `zones`(`id_zone`,`zone_name`,`id_city`) values (40,'Altos de Jalisco',13);
+insert  into `zones`(`id_zone`,`zone_name`,`id_city`) values (41,'El Morro',14);
+insert  into `zones`(`id_zone`,`zone_name`,`id_city`) values (42,'Pueblo Nuevo',14);
+insert  into `zones`(`id_zone`,`zone_name`,`id_city`) values (43,'Valle Verde',14);
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;

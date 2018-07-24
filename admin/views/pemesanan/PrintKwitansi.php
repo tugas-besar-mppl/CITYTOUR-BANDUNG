@@ -1,0 +1,1 @@
+<iframe id="pdf_view" src="views/pemesanan/PdfPrintKwitansi.php?id=<?php echo $_GET["id"];?>" height="600" width="850">
